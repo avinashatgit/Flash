@@ -25,7 +25,23 @@ gauge install flash --file flash-0.0.0-linux.x86_64.zip
 
 #### Usage 
 
-Execute specs and open the URL in browser shown in console output.
+- Ensure  that you project's `manifest.json` file contains `flash` in the Plugins list.
+
+Something like :  
+```
+{
+"Language": "java",
+"Plugins": [
+"html-report",
+"flash"
+]
+}	
+```
+
+- Execute specs and open the URL in browser shown in **console output**. 	e.g. http://127.0.0.1:[FLASH_SERVER_PORT]
+- FLASH_SERVER_PORT is a random available port, but can be configured using the config below 
+
+
 
 ### Configuration
 
@@ -88,3 +104,4 @@ go run build/make.go --distro --all-platforms
 ## Copyright
 
 Copyright 2017 ThoughtWorks, Inc.
+
